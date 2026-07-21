@@ -1,0 +1,99 @@
+BinauralJourney v1.0.0
+Unsigned macOS release by jwesters
+
+AUDIO UNIT — Logic Pro and AU hosts
+
+Copy:
+
+BinauralJourney.component
+
+to:
+
+~/Library/Audio/Plug-Ins/Components/
+
+
+VST3 — VST3-compatible hosts
+
+Copy:
+
+BinauralJourney.vst3
+
+to:
+
+~/Library/Audio/Plug-Ins/VST3/
+
+
+After installation:
+
+1. Quit and reopen the audio application.
+2. Logic users can open:
+   Logic Pro > Settings > Plug-in Manager
+3. Find BinauralJourney and choose Reset & Rescan Selection if needed.
+
+This release is unsigned and unnotarized. macOS may display a
+security warning. Install it only when received from a trusted source.
+
+Headphones are required for the intended binaural-beat effect.
+Begin at a comfortable listening volume.
+
+
+OPTIONAL: VALIDATE THE AUDIO UNIT
+
+This step is not normally required if BinauralJourney already appears
+and works correctly in Logic Pro. Use it to confirm the Audio Unit
+installed correctly or when troubleshooting.
+
+1. Quit Logic Pro.
+2. Open Terminal.
+3. Run:
+
+   auval -v aumu Bnjr JWst
+
+Near the end of the results, it should say:
+
+   AU VALIDATION SUCCEEDED
+
+If validation fails, reopen Logic Pro and go to:
+
+   Logic Pro > Settings > Plug-in Manager
+
+Select BinauralJourney, then choose:
+
+   Reset & Rescan Selection
+
+
+FIND BINAURALJOURNEY IN LOGIC PRO
+
+BinauralJourney is a software instrument, not an audio effect.
+
+1. Open Logic Pro.
+2. Create a new Software Instrument track, or select an existing
+   Software Instrument track.
+3. Press I to show the Inspector, or open the Mixer.
+4. In the track's channel strip, locate the Instrument slot.
+5. Click the Instrument slot.
+6. Choose:
+
+   AU Instruments
+   > jwesters
+   > BinauralJourney
+   > Stereo
+
+Do not look for BinauralJourney inside the Audio FX slots.
+
+If BinauralJourney does not appear:
+
+1. Open:
+
+   Logic Pro > Settings > Plug-in Manager
+
+2. Search for:
+
+   BinauralJourney
+
+3. Confirm that it is enabled.
+4. Select it and click:
+
+   Reset & Rescan Selection
+
+5. Quit and reopen Logic Pro.
