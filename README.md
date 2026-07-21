@@ -1,2 +1,2 @@
 # Audio-Plugins
- Audio plugins for Audacity and 
+ Audio Plugins w/ Source Code
