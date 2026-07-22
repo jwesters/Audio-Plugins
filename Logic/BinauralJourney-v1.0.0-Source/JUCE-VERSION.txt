@@ -1,0 +1,40 @@
+BinauralJourney v1.0.0 was developed and tested with:
+
+JUCE 8.0.14
+
+The JUCE Framework is not included in this source package.
+
+JUCE 8.0.14 and Projucer are required to regenerate the Xcode project.
+Projucer may be built from the JUCE repository or installed separately.
+Its exact location does not need to match the BinauralJourney source folder.
+
+JUCE module configuration:
+
+The BinauralJourney.jucer project is configured to use Projucer's global
+JUCE module path.
+
+Before opening the project, open Projucer and choose:
+
+Projucer > Global Paths
+
+Set the JUCE modules path to the modules directory inside your JUCE 8.0.14
+installation, for example:
+
+/path/to/JUCE-8.0.14/modules
+
+Then open BinauralJourney.jucer and choose Save Project and Open in IDE.
+
+Although relative module paths may also appear in the .jucer file, the
+project's modules are currently set to use the global path configured in
+Projucer.
+
+Tested development environment:
+
+- macOS
+- Apple Silicon
+- Xcode 26.6
+- JUCE 8.0.14
+- Logic Pro
+
+Anyone compiling, modifying, or redistributing BinauralJourney must obtain
+JUCE separately and comply with the JUCE licence applicable to their use.
