@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Projucer-generated files
+Builds/
+JuceLibraryCode/
+
+# Build products
+build/
+Build/
+Debug/
+Release/
+*.component
+*.vst3
+*.app
+*.dSYM
+*.dSYM.zip
+
+# Temporary files
+*.tmp
+*.bak
+*~
