@@ -1,0 +1,119 @@
+PROGRESSIVE PITCH DELAY v1.2.2
+MACOS SETUP AND USE
+
+IMPORTANT
+---------
+This release is not signed with an Apple Developer ID and is not notarized by
+Apple. Only install it if you downloaded it from a source you trust. macOS may
+block it the first time your audio program scans it.
+
+Logic Pro uses the Audio Unit (AU) version. The VST3 version is for audio
+programs that support VST3; Logic Pro does not load VST3 plug-ins.
+
+
+QUICK INSTALL — RECOMMENDED
+---------------------------
+1. Quit Logic Pro and any other audio programs.
+2. Unzip the downloaded AU or VST3 package.
+3. Control-click or right-click Install-Unsigned-Mac.command and choose Open.
+4. If macOS asks for confirmation, choose Open.
+5. The installer copies the plug-in into your personal Library folder. It does
+   not use sudo, request an administrator password, or change system-wide
+   security settings.
+6. Restart the Mac, then open the audio program.
+
+If macOS refuses to open the installer script:
+1. Try opening it once.
+2. Open System Settings > Privacy & Security.
+3. Scroll to Security and choose Open Anyway for the blocked item.
+4. Return to the extracted folder and open Install-Unsigned-Mac.command again.
+
+
+MANUAL AU INSTALLATION — LOGIC PRO
+----------------------------------
+1. Quit Logic Pro.
+2. In Finder, choose Go > Go to Folder.
+3. Enter:
+
+   ~/Library/Audio/Plug-Ins/Components/
+
+4. Create the Components folder if it does not already exist.
+5. Copy Progressive Pitch Delay.component into that folder.
+6. Open Terminal and run this exact command:
+
+   xattr -dr com.apple.quarantine "$HOME/Library/Audio/Plug-Ins/Components/Progressive Pitch Delay.component"
+
+7. Restart the Mac and open Logic Pro.
+
+To find the plug-in in Logic Pro:
+
+   Audio FX > Audio Units > jwesters > Progressive Pitch Delay > Stereo
+
+If it does not appear:
+1. Choose Logic Pro > Settings > Plug-in Manager.
+2. Search for Progressive Pitch Delay or select jwesters.
+3. Select the plug-in and choose Reset & Rescan Selection.
+4. If it still does not appear, choose Full Audio Unit Reset, quit Logic, and
+   reopen it. A complete reset may take several minutes.
+
+
+MANUAL VST3 INSTALLATION
+------------------------
+1. Quit the VST3-compatible audio program.
+2. In Finder, choose Go > Go to Folder.
+3. Enter:
+
+   ~/Library/Audio/Plug-Ins/VST3/
+
+4. Create the VST3 folder if it does not already exist.
+5. Copy Progressive Pitch Delay.vst3 into that folder.
+6. Open Terminal and run this exact command:
+
+   xattr -dr com.apple.quarantine "$HOME/Library/Audio/Plug-Ins/VST3/Progressive Pitch Delay.vst3"
+
+7. Restart the Mac, open the audio program, and rescan VST3 plug-ins if the
+   program does not scan automatically.
+
+
+BASIC USE
+---------
+1. Add Progressive Pitch Delay to an audio-effect insert on a guitar, vocal,
+   drum, keyboard, or other audio track.
+2. Choose Normal for standard echoes or Reverse for reversed delay blocks.
+3. Choose Higher or Lower for the direction each repeat moves in pitch.
+4. Set Semitones / Repeat to choose the pitch movement for each echo.
+5. Set Repeats to choose how many echoes are generated.
+6. Use Delay Time in seconds, or enable Tempo Sync and choose a musical note
+   division.
+7. Use Original, First Repeat, and Reduction / Repeat to balance the dry signal
+   and the echo levels.
+8. High quality gives the cleanest pitch shifting. Draft uses less processing.
+9. Keep Auto Headroom enabled when using loud, reversed, or overlapping echoes.
+
+FACTORY AND USER PRESETS
+------------------------
+- Choose a factory preset from the preset menu.
+- Click Save to create a .ppdpreset user preset.
+- Click Load to open a saved user preset.
+- Click Folder to reveal the most recently used preset folder.
+- Click Reset to return to the default settings.
+- Logic projects retain the actual settings and the loaded user-preset name.
+
+
+REMOVAL
+-------
+AU:
+Delete this folder, then restart Logic Pro:
+
+   ~/Library/Audio/Plug-Ins/Components/Progressive Pitch Delay.component
+
+VST3:
+Delete this folder, then restart the host:
+
+   ~/Library/Audio/Plug-Ins/VST3/Progressive Pitch Delay.vst3
+
+
+COMPATIBILITY NOTE
+------------------
+The Mac architecture supported by a release depends on how its binaries were
+built. An Apple-silicon-only build will not run natively on an Intel Mac.
